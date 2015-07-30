@@ -4,11 +4,23 @@
     <title></title>
 </head>
 <body ng-app="app">
-    Hello World.
+    <form id="helloForm" novalidate>
+        <h2>Hello Form</h2>
+        <div ng-controller="FormController as fc">
+            <label>
+                Name: <input type="text" ng-model="name" required/>
+            </label><br/>
+            Value: {{name}}
+            <p>
+                Is valid: {{helloForm.$valid}}
+            </p>
+        </div>
+        <input type="submit" value="Submit"/>
+    </form>
 
-    <script src="Scripts/angular.js"></script>
-    <script src="Scripts/angular-animate.js"></script>
-    <script src="Scripts/angular-route.js"></script>
-    <script src="App/app.js"></script>
+<script src="Scripts/angular.js"></script>
+<script src="Scripts/angular-animate.js"></script>
+<script src="Scripts/angular-route.js"></script>
+<script src="App/app.js"></script>
 </body>
 </html>

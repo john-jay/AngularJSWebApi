@@ -1,14 +1,7 @@
-﻿(function () {
-    'use strict';
-
-    angular.module('app', [
-        // Angular modules
-        'ngAnimate',
-        'ngRoute'
-
-        // Custom modules
-
-        // 3rd Party Modules
-        
-    ]);
-})();
+var Jmh;
+(function (Jmh) {
+    var app = angular.module('app', ['ngAnimate', 'ngRoute']);
+    app.controller("FormController", function () {
+    });
+})(Jmh || (Jmh = {}));
+//# sourceMappingURL=app.js.map
