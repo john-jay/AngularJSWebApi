@@ -1,29 +1,35 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Angular/Bootstrap Template</title>
     <link href="Content/bootstrap.css" rel="stylesheet" />
 </head>
 <body ng-app="app">
-    <form id="helloForm" novalidate>
-        <h2>Hello Form</h2>
-        <div ng-controller="FormController as fc">
-            <label>
-                Name: <input type="text" ng-model="name" required />
-            </label><br />
-            Value: {{name}}
-            <p>
-                Is valid: {{helloForm.$valid}}
-            </p>
-        </div>
-        <input type="submit" value="Submit" />
-    </form>
+    <div class="container">
+        <form id="helloForm" novalidate>
+            <h2>Hello, form!</h2>
+            <div ng-controller="FormController as fc">
+                <label>
+                    Name: <input type="text" ng-model="name" required />
+                </label><br />
+                Value: {{name}}
+                <p>
+                    Is valid: {{helloForm.$valid}}
+                </p>
+            </div>
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
 
-    <script src="Scripts/jquery-1.9.1.js"></script>
-    <script src="Scripts/bootstrap.js"></script>
-    <script src="Scripts/angular.js"></script>
-    <script src="Scripts/angular-animate.js"></script>
-    <script src="Scripts/angular-route.js"></script>
-    <script src="App/app.js"></script>
+<script src="Scripts/jquery-1.9.1.js"></script>
+<script src="Scripts/bootstrap.js"></script>
+<script src="Scripts/angular.js"></script>
+<script src="Scripts/angular-animate.js"></script>
+<script src="Scripts/angular-route.js"></script>
+<script src="App/app.js"></script>
 </body>
 </html>
