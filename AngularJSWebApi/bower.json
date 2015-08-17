@@ -1,0 +1,26 @@
+{
+  "name": "AngularJSWebApi",
+  "version": "0.0.0",
+  "homepage": "https://github.com/john-jay/AngularJSWebApi",
+  "authors": [
+    "John Holliday <johnmholliday@gmail.com>"
+  ],
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "modernizr": "~2.8.3",
+    "respond-minmax": "~1.4.2"
+  }
+}
