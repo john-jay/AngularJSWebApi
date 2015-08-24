@@ -210,4 +210,8 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+
+# UI built files
 *.js.map
+bower_components/
+all.min.js
