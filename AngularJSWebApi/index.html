@@ -7,42 +7,12 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Angular/Bootstrap demo</title>
     <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/app.css" rel="stylesheet" />
     <script src="Scripts/jquery-2.1.4.js"></script>
     <script src="Scripts/angular.js"></script>
 </head>
 <body ng-app="app">
-    <div class="container" ng-controller="FormCtrl as fc">
-        <h2>Angular demo</h2>
-        <div>
-            <h4>
-                Bootstrap dropdown
-            </h4>
-            <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    {{fc.subjects[fc.selection]}} <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li ng-repeat="subject in fc.subjects">
-                        <a href="#" ng-click="fc.selection = $index">{{subject}}</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <form id="helloForm" novalidate ng-hide="true">
-            <h2>Hello, world!</h2>
-            <div>
-                <label>
-                    Name: <input type="text" ng-model="name" required />
-                </label><br />
-                Value: {{name}}
-                <p>
-                    Is valid: {{helloForm.$valid}}
-                </p>
-            </div>
-            <input type="submit" value="Submit" />
-            <hr />
-        </form>
+    <div class="container" ng-include="'App/Form/form.html'">
     </div>
 
     <script src="Scripts/bootstrap.js"></script>
