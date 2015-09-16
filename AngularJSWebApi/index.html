@@ -10,8 +10,25 @@
 </head>
 <body ng-app="app">
     <div class="container" ng-controller="FormCtrl as fc">
-        <form id="helloForm" novalidate>
-            <h2>Hello, form!</h2>
+        <h2>Angular demo</h2>
+        <div>
+            <h4>
+                Bootstrap dropdown
+            </h4>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    {{fc.subjects[fc.selection]}} <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li ng-repeat="subject in fc.subjects">
+                        <a href="#" ng-click="fc.selection = $index">{{subject}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <form id="helloForm" novalidate ng-hide="true">
+            <h2>Hello, world!</h2>
             <div>
                 <label>
                     Name: <input type="text" ng-model="name" required />
@@ -22,36 +39,8 @@
                 </p>
             </div>
             <input type="submit" value="Submit" />
+            <hr />
         </form>
-        <hr/>
-        <p>
-            Dropdown using angular-ui
-            <div class="btn-group" dropdown is-open="status.isopen">
-                <button id="single-button" type="button" class="btn btn-primary" dropdown-toggle>
-                    Button dropdown <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
-                    <li role="menuitem"><a href="#">Action</a></li>
-                    <li role="menuitem"><a href="#">Another action</a></li>
-                    <li role="menuitem"><a href="#">Something else here</a></li>
-                </ul>
-            </div>
-        </p>
-        <p>
-            No add-in needed.
-            <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    {{fc.subjects[fc.selection - 1]}} <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#" ng-click="fc.selection = 1">Physics</a></li>
-                    <li><a href="#" ng-click="fc.selection = 2">Math</a></li>
-                    <li><a href="#" ng-click="fc.selection = 3">Chemistry</a></li>
-                    <li><a href="#" ng-click="fc.selection = 4">Hindi</a></li>
-                </ul>
-            </div>
-            Selection: {{fc.selection}}
-        </p>
     </div>
 
     <script src="Scripts/jquery-1.9.1.js"></script>

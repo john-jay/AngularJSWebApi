@@ -2,7 +2,7 @@
     'use strict';
 
     export class FormCtrl {
-        selection = 1; 
+        selection = 0; 
         subjects = ['Chemistry', 'Brain surgery', 'Rocket science', 'Art'];
 
         constructor() {
