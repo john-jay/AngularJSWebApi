@@ -9,7 +9,7 @@
     <link href="Content/bootstrap.css" rel="stylesheet" />
 </head>
 <body ng-app="app">
-    <div class="container">
+    <div class="container" ng-controller="FormController as fc">
         <form id="helloForm" novalidate>
             <h2>Hello, form!</h2>
             <div>
@@ -23,14 +23,42 @@
             </div>
             <input type="submit" value="Submit" />
         </form>
+        <hr/>
+        <p>
+            Dropdown using angular
+            <div class="btn-group" dropdown is-open="status.isopen">
+                <button id="single-button" type="button" class="btn btn-primary" dropdown-toggle>
+                    Button dropdown <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
+                    <li role="menuitem"><a href="#">Action</a></li>
+                    <li role="menuitem"><a href="#">Another action</a></li>
+                    <li role="menuitem"><a href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </p>
+        <p>
+            No angular needed.
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Subject <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">Physics</a></li>
+                    <li><a href="#">Math</a></li>
+                    <li><a href="#">Chemistry</a></li>
+                    <li><a href="#">Hindi</a></li>
+                </ul>
+            </div>
+        </p>
     </div>
 
-<script src="Scripts/jquery-1.9.1.js"></script>
-<script src="Scripts/bootstrap.js"></script>
-<script src="Scripts/angular.js"></script>
-<script src="Scripts/angular-animate.js"></script>
-<script src="Scripts/angular-route.js"></script>
-<script src="Scripts/libs/ui-bootstrap-tpls.js"></script>
-<script src="App/app.js"></script>
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-animate.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/libs/ui-bootstrap-tpls.js"></script>
+    <script src="App/app.js"></script>
 </body>
 </html>
