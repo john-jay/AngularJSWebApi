@@ -11,7 +11,11 @@ var del = require('del');
 
 var config = {
     //Include all js files but exclude any min.js files
-    src: ['app/**/*.js', '!app/**/*.min.js']
+    src: ['app/**/*.js', '!app/**/*.min.js'],
+    libs: {
+        sources: ['bower_components/angular-bootstrap/ui-bootstrap-tpls.js'],
+        dest: 'Scripts/libs/'
+    }
 }
 
 // Synchronously delete the output file(s)
@@ -22,10 +26,12 @@ gulp.task('clean', function () {
 // Combine and minify all files from the app folder
 gulp.task('scripts', ['clean'], function () {
 
-    return gulp.src(config.src)
+    gulp.src(config.src)
       .pipe(uglify())
       .pipe(concat('all.min.js'))
       .pipe(gulp.dest('app/'));
+    gulp.src(config.libs.sources)
+      .pipe(gulp.dest(config.libs.dest));
 });
 
 //Set a default tasks
