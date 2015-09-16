@@ -215,4 +215,4 @@ ModelManifest.xml
 *.js.map
 bower_components/
 all.min.js
-**/App/*.js
+**/App/**/*.js
