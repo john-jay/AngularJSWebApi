@@ -8,7 +8,8 @@
             <button class="btn btn-default dropdown-toggle no-border" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 {{fc.selection}} {{fc.subjects[fc.selection]}} <span class="caret"></span>
             </button>
-            <ul class="dropdown-menu epiq-menu" aria-labelledby="dropdownMenu1">
+            <ul class="dropdown-menu custom-menu" aria-labelledby="dropdownMenu1">
+                <li class="dim">Class</li>
                 <li ng-repeat="subject in fc.subjects">
                     <a href="#" ng-click="fc.selection = $index"><span class="glyphicon check-indent" ng-class="{'glyphicon-ok': fc.selection == $index}"></span> {{subject}}</a>
                 </li>
