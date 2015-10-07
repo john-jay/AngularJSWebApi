@@ -1,12 +1,14 @@
 ﻿<div ng-controller="FormCtrl as fc">
-    <h2>Angular demo</h2>
+    <h2>Web demo</h2>
+    <p>This demonstrates Angular, Bootstrap, TypeScript and Scss.</p>
+    <br/>
     <div>
         <h4>
             Bootstrap dropdown
         </h4>
         <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle no-border" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                {{fc.selection}} {{fc.subjects[fc.selection]}} <span class="caret"></span>
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                {{fc.subjects[fc.selection]}} <span class="caret"></span>
             </button>
             <ul class="dropdown-menu custom-menu" aria-labelledby="dropdownMenu1">
                 <li class="dim">Class</li>
@@ -14,6 +16,7 @@
                     <a href="#" ng-click="fc.selection = $index"><span class="glyphicon check-indent" ng-class="{'glyphicon-ok': fc.selection == $index}"></span> {{subject}}</a>
                 </li>
             </ul>
+            Selection: {{fc.selection}}
         </div>
     </div>
 
