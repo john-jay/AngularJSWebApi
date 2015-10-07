@@ -1,0 +1,24 @@
+﻿/* dropdown */
+.no-border {
+  border: none; }
+
+.custom-menu {
+  padding: 6px;
+  min-width: 0;
+  /*border: #e0e0e0;
+    box-shadow: 0 2px 4px;*/ }
+
+.custom-menu > li > a {
+  padding: 0 6px;
+  margin: 0 -6px; }
+
+.custom-menu > li > a:hover {
+  color: white;
+  background: #0283c4; }
+
+.dim {
+  color: gray; }
+
+.check-indent {
+  min-width: 20px; }
+
