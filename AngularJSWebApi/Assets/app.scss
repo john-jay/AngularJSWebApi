@@ -3,27 +3,26 @@
     border: none;
 }
 
-.custom-menu {
+.custom-menu { // Pop-up
     padding: 6px;
     min-width: 0;
     /*border: #e0e0e0;
     box-shadow: 0 2px 4px;*/
-}
-
-    .custom-menu > li > a {
+    > li > a {
         padding: 0 6px;
         margin: 0 -6px;
-    }
 
-        .custom-menu > li > a:hover {
+        &:hover {
             color: white;
             background: #0283c4;
         }
+    }
 
-.dim {
-    color: gray;
-}
+    .dim {
+        color: gray;
+    }
 
-.check-indent {
-    min-width: 20px;
+    .check-indent {
+        min-width: 20px;
+    }
 }
