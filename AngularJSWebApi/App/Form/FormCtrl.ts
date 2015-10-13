@@ -1,5 +1,4 @@
 ﻿module demo {
-    'use strict';
 
     export class FormCtrl {
         selection = 0; 

@@ -150,7 +150,6 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="App\app.run.ts" />
     <TypeScriptCompile Include="App\app.ts" />
     <TypeScriptCompile Include="App\Form\FormCtrl.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
